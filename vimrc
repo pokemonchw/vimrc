@@ -43,7 +43,7 @@ let g:Lf_PreviewInPopup = 1
 syntax on
 filetype on
 filetype plugin indent on
-highlight Pmenu ctermfg=15 ctermbg=8
+highlight Pmenu ctermfg=15 ctermbg=236
 highlight PmenuSel ctermfg=0 ctermbg=7
 autocmd FileType python nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
 map <F2> :NERDTreeToggle<CR>
