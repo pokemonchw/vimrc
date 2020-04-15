@@ -35,7 +35,7 @@ cd到你的任意项目目录下并打开当vim,它看上去就像这样: \
 2.智能补全: \
 ![AutoFix](https://raw.github.com/pokemonchw/vimrc/master/image/3.png "AutoFix")
 依照个人喜好,会在输入第一个字符的时候就开始对代码进行智能补全提示,目前支持golang和python,感谢于社区的努力,ycm现在能够提示typehints和docstring,并将docstring放进popup中 \
-关于docstring: python需放在函数内第一行,golang需放在函数定义前,需注意的是,golang的docstring在注释中需遵守godoc语法规则,否则无法识别换行 \
+关于docstring: python需放在函数内第一行,golang需放在函数定义前,需注意的是,golang的docstring在注释中需遵守godoc语法规则,否则无法识别换行
 
 3.模糊搜索: \
 ![FuzzySearch](https://raw.github.com/pokemonchw/vimrc/master/image/4.png "FuzzySearch")

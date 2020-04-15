@@ -10,11 +10,16 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'Yggdroot/LeaderF'
 call plug#end()
 nnoremap <space> za
+filetype on
+filetype plugin indent on
+autocmd FileType go let g:go_def_mode = 'gopls'
 autocmd FileType python set ai
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 autocmd FileType python set ai
+autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
+autocmd FileType python nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
 autocmd FileType json set sw=2
 autocmd FileType json set ts=2
 autocmd FileType json set sts=2
@@ -35,19 +40,15 @@ let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_semantic_triggers={'python,go': ['re!\w{1}']}
-let g:go_def_mode = 'gopls'
+let g:ycm_semantic_triggers={'python,go': ['re!\w{2}']}
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 let g:Lf_PreviewInPopup = 1
 syntax on
-filetype on
-filetype plugin indent on
 highlight Pmenu ctermfg=15 ctermbg=236
 highlight PmenuSel ctermfg=0 ctermbg=7
-autocmd FileType python nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
 map <F2> :NERDTreeToggle<CR>
 map <F6> :PlugStatus<CR>
 map <F7> :PlugInstall<CR>
 map <F8> :PlugClean<CR>
-map <C-f> :Leaderf rg -M 200
+map <C-f> :Leaderf rg -M 200 
