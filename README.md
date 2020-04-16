@@ -40,8 +40,8 @@ cd到你的任意项目目录下并打开当vim,它看上去就像这样: \
 3.模糊搜索: \
 ![FuzzySearch](https://raw.github.com/pokemonchw/vimrc/master/image/4.png "FuzzySearch")
 依赖于 [LeaderF](https://github.com/Yggdroot/LeaderF) 插件,可以进行简便强大的快速模糊搜索 \
-按下 ctrl+f 底部会进入命令输入栏,按个人喜好, ctrl+f 被设置为了 :Leaderf rg ,在这里,你可以依照leaderf插件中的说明,将rg替换成别的选项,然后输入你想要搜索的内容然后回车,进入leaderf的popup菜单,可以进一步输入内容进行筛选,也可以回车跳转到选项,或是按 ctrl+x 分割窗口打开
+按下 ctrl+f 底部会进入命令输入栏,按个人喜好, ctrl+f 被设置为了 :Leaderf rg ,在这里,你可以依照leaderf插件中的说明,将rg替换成别的选项,然后输入你想要搜索的内容然后回车,进入leaderf的popup菜单,可以进一步输入内容进行筛选,也可以回车跳转到选项,或是按 ctrl+f 分割窗口打开
 
 4.跳转到声明和定义处: \
-将光标移动到一个单词处,按下 ctrl+] 即可跳转 \
+将光标移动到一个单词处,按下 ctrl+] 即可跳转,同时支持 ctrl+\ 进行分割屏幕跳转 \
 按下 ctrl+t 即可退回

@@ -20,6 +20,7 @@ autocmd FileType python set sts=4
 autocmd FileType python set ai
 autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
 autocmd FileType python nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
+autocmd FileType python nnoremap <buffer> <C-\> :vsp \| :YcmCompleter GoToDefinitionElseDeclaration <CR>
 autocmd FileType json set sw=2
 autocmd FileType json set ts=2
 autocmd FileType json set sts=2
