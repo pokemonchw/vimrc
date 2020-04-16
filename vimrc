@@ -52,3 +52,7 @@ map <F6> :PlugStatus<CR>
 map <F7> :PlugInstall<CR>
 map <F8> :PlugClean<CR>
 map <C-f> :Leaderf rg -M 200 
+map <C-left> ^
+map <C-right> $
+map <C-up> B
+map <C-down> W
