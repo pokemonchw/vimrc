@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged') 
 Plug 'vim-scripts/indentpython.vim'
+Plug 'Valloric/YouCompleteMe'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
@@ -9,7 +10,6 @@ Plug 'fatih/vim-go'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'Yggdroot/LeaderF'
 call plug#end()
-nnoremap <space> za
 filetype on
 filetype plugin indent on
 autocmd FileType go let g:go_def_mode = 'gopls'
@@ -45,6 +45,7 @@ let g:ycm_semantic_triggers={'python,go': ['re!\w{2}']}
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 let g:Lf_PreviewInPopup = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 syntax on
 highlight Pmenu ctermfg=15 ctermbg=236
 highlight PmenuSel ctermfg=0 ctermbg=7

@@ -5,7 +5,6 @@ vimrc
 
 依赖
 ----
-智能补全: [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) \
 模糊搜索: [ripgrep](https://github.com/BurntSushi/ripgrep) \
 插件管理: [vim-plug](https://github.com/junegunn/vim-plug) \
 请确保您已安装好python3和golang等基础环境
@@ -16,7 +15,8 @@ vimrc
 复制粘贴入此repo中的 [vimrc文件](https://github.com/pokemonchw/vimrc/blob/master/vimrc) 中的内容 \
 保存后,重新打开vim \
 在 Normal 模式下按F7 \
-等待自动安装插件依赖
+等待自动安装插件依赖 \
+备注:ycm的配置比较特殊,安装完成后需要cd到 ~/.vim/plugged/YouCompleteMe 目录下,依照 [ycm installation](https://github.com/ycm-core/YouCompleteMe#installation) 安装语言对应支持,中国大陆用户不建议使用 .intsll.py --all 
 
 说明
 ----
