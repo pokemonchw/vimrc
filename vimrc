@@ -41,11 +41,11 @@ let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_semantic_triggers={'python,go': ['re!\w{2}']}
+let g:ycm_semantic_triggers={'python,go,cpp': ['re!\w{2}']}
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 let g:Lf_PreviewInPopup = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 syntax on
 highlight Pmenu ctermfg=15 ctermbg=236
 highlight PmenuSel ctermfg=0 ctermbg=7
