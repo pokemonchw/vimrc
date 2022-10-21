@@ -13,6 +13,7 @@ call plug#end()
 filetype on
 filetype plugin indent on
 autocmd FileType go let g:go_def_mode = 'gopls'
+autocmd FileType cpp nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
 autocmd FileType python set ai
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
