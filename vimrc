@@ -12,6 +12,7 @@ Plug 'Yggdroot/LeaderF'
 call plug#end()
 filetype on
 filetype plugin indent on
+colorscheme slate
 autocmd FileType go let g:go_def_mode = 'gopls'
 autocmd FileType cpp nnoremap <buffer> <C-]> :YcmCompleter GoToDefinitionElseDeclaration <CR>
 autocmd FileType python set ai
