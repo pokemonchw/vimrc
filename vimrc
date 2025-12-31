@@ -55,8 +55,46 @@ map <F2> :NERDTreeToggle<CR>
 map <F6> :PlugStatus<CR>
 map <F7> :PlugInstall<CR>
 map <F8> :PlugClean<CR>
-map <C-f> :Leaderf rg -M 200 
+map <C-f> :Leaderf rg --sort path -M 200 
 map <C-left> ^
 map <C-right> $
 map <C-up> B
 map <C-down> W
+
+function! s:ToggleBlockCommentVisual() range
+  let l:start_line = line("'<")
+  let l:end_line   = line("'>")
+
+  if l:start_line > l:end_line
+    let l:tmp = l:start_line
+    let l:start_line = l:end_line
+    let l:end_line = l:tmp
+  endif
+
+  if &filetype ==# 'python'
+    let l:begin = '"""'
+    let l:end   = '"""'
+  elseif &filetype ==# 'go'
+    let l:begin = '/*'
+    let l:end   = '*/'
+  else
+    echo "当前文件类型不支持块注释：" . &filetype
+    return
+  endif
+
+  let l:prev_line = getline(l:start_line - 1)
+  let l:next_line = getline(l:end_line + 1)
+
+  let l:prev_trim = trim(l:prev_line)
+  let l:next_trim = trim(l:next_line)
+
+  if l:prev_trim ==# l:begin && l:next_trim ==# l:end
+    call deletebufline(bufnr('%'), l:end_line + 1)
+    call deletebufline(bufnr('%'), l:start_line - 1)
+  else
+    call append(l:end_line, l:end)
+    call append(l:start_line - 1, l:begin)
+  endif
+endfunction
+
+xnoremap <silent> # :<C-u>call <SID>ToggleBlockCommentVisual()<CR>
