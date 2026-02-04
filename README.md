@@ -31,6 +31,8 @@ cd到你的任意项目目录下并打开当vim,它看上去就像这样: \
 ![ProjectTree](https://raw.github.com/pokemonchw/vimrc/master/image/2.png "ProjectTree")
 支持使用鼠标对其进行操作,同时可以在选中后按下 s键 快速分割窗口打开一个文件
 ![ProjectTree2](https://raw.github.com/pokemonchw/vimrc/master/image/5.png "ProjectTree2")
+同时支持文件内容预览
+![ProjectTree3](https://raw.github.com/pokemonchw/vimrc/master/image/6.png "ProjectTree3")
 
 2.智能补全: \
 ![AutoFix](https://raw.github.com/pokemonchw/vimrc/master/image/3.png "AutoFix")
